@@ -150,3 +150,8 @@ else()
     log_option_disabled("Build tests")
   endif()
 endif()
+if(WIN32)
+    set_target_properties(otclient PROPERTIES
+        WIN32_EXECUTABLE TRUE
+    )
+endif()
